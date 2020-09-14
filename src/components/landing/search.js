@@ -11,7 +11,7 @@ const Search = props => {
     const handleSearch = async event => {
         event.preventDefault();
         try {
-            const searchResult = await fetch(`http://localhost:8080/names/?name=${search}`);
+            const searchResult = await fetch(`${process.env.REACT_APP_BACK_SERVER}${process.env.REACT_APP_NAME_API}/?name=${search}`);
             const result = await searchResult.json();
             props.callBackMe(result);
         } catch (error) {

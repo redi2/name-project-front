@@ -15,7 +15,7 @@ const EditName = ({currentName}) => {
         try {
             const body = {name, gender,origin_language};
             console.log(body);
-            const updateName = await fetch(`http://localhost:8080/names/${currentName.name_id}`, {
+            const updateName = await fetch(`${process.env.REACT_APP_BACK_SERVER}${process.env.REACT_APP_NAME_API}/${currentName.name_id}`, {
                 method: 'PUT',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(body)

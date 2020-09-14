@@ -6,7 +6,7 @@ const ListNames = () => {
 
     const getNames = async () => {
         try {
-            const fetchedNames = await fetch('http://localhost:8080/names');
+            const fetchedNames = await fetch(`${process.env.REACT_APP_BACK_SERVER}${process.env.REACT_APP_NAME_API}`);
             const jsonNames = await fetchedNames.json();
             setNames(jsonNames);
             console.log(jsonNames);

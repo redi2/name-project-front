@@ -27,7 +27,7 @@ const AddMoreDeatil = (props) => {
         // fetch('http://localhost:8080/age-range').then(response => {
         //     response.json();
         // }).then(result => console.log(result))
-        axios.get('http://localhost:8080/age-range')
+        axios.get(`${process.env.REACT_APP_BACK_SERVER}${process.env.REACT_APP_AGE_RANGE_API}`)
         .then( response => {
             setAgeRange(response.data)
         })
@@ -44,7 +44,7 @@ const AddMoreDeatil = (props) => {
 
     const updateAlias = () => {
         try {
-            axios.post('http://localhost:8080/alias', {
+            axios.post(`${process.env.REACT_APP_BACK_SERVER}${process.env.REACT_APP_ALIAS_API}`, {
                 name, alias
             }).then( result => console.log(result));
         } catch(error) {
@@ -54,7 +54,7 @@ const AddMoreDeatil = (props) => {
 
     const updateAgeRange = () => {
         try {
-            axios.post('http://localhost:8080/update-age-range', {
+            axios.put(`${process.env.REACT_APP_BACK_SERVER}${process.env.REACT_APP_AGE_RANGE_API}`, {
                 range_id: selectedRange, name: name
             })
             .then(response => console.log(response));
