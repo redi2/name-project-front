@@ -4,7 +4,7 @@
  * @author Practical IT
  */
 import React, { Fragment, useState } from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
 import './App.css';
 
@@ -29,7 +29,7 @@ function App() {
 
       <nav className="navbar navbar-light bg-light static-top">
         <div className="container">
-          <a className="navbar-brand" href="/">The NAME - Heritage - Project</a>
+          <Link className="navbar-brand" to="/">The NAME - Heritage - Project</Link>
           <a className="btn btn-primary" href="#">Volunteer</a>
         </div>
       </nav>
