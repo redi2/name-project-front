@@ -29,7 +29,7 @@ function App() {
 
       <nav className="navbar navbar-light bg-light static-top">
         <div className="container">
-          <a className="navbar-brand" href="#">The NAME - Heritage - Project</a>
+          <a className="navbar-brand" href="/">The NAME - Heritage - Project</a>
           <a className="btn btn-primary" href="#">Volunteer</a>
         </div>
       </nav>
