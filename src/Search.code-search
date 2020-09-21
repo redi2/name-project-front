@@ -1,0 +1,9 @@
+# Query: Search your NAME
+# ContextLines: 1
+
+1 result - 1 file
+
+src\components\landing\search.js:
+  24                  <div className="col-xl-9 mx-auto">
+  25:                     <h1 className="mb-5">Search Your Name</h1>
+  26                  </div>
