@@ -126,7 +126,7 @@ const AddMoreDeatil = (props) => {
                 <div className="features-icons-icon d-flex">
                   <i className="icon-tag m-auto text-primary"></i>
                 </div>
-                <h3>Alias for this name</h3>
+                <h3>Alias for this Name</h3>
                 <input
                   onChange={(e) => setAlias(e.target.value)}
                   className="form-control"
