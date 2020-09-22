@@ -32,7 +32,7 @@ function App() {
               The Name (Heritage) Project.
             </a>
             <a className="btn btn-primary" href="#">
-              Become Volunteer
+              Become a Volunteer
             </a>
           </div>
         </nav>
