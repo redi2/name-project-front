@@ -10,7 +10,7 @@ const CreateName = (props) => {
 
     const [origin_language, setOriginLanguage] = useState("");
 
-    const getLookups = async(url, setter) => {
+    const getLookups = async (url, setter) => {
         try {
             const response = await fetch(url);
             const jsonResponse = await response.json();
@@ -62,10 +62,10 @@ const CreateName = (props) => {
                         <label htmlFor="origin_language">Origin Language</label>
                         <select value={origin_language}
                             onChange={e => setOriginLanguage(e.target.value)} className="form-control" id="origin_language">
-                                <option>Select Origin Language</option>
+                            <option> Origin Language</option>
                             {
-                                allOrigins.map( (origin) => {
-                                return (<option key={origin.origin_id} value={origin.origin_id}>{origin.title}</option>)
+                                allOrigins.map((origin) => {
+                                    return (<option key={origin.origin_id} value={origin.origin_id}>{origin.title}</option>)
                                 })
                             }
                         </select>
@@ -74,7 +74,7 @@ const CreateName = (props) => {
                         <label htmlFor="gender">Gender</label>
                         <select
                             onChange={e => setGender(e.target.value)} className="form-control">
-                                <option value="">Select For which gender this name is for</option>
+                            <option value="">Select For which gender this name is for</option>
                             {allGenders.map((gender) => {
                                 return (<option key={gender.gender_id} value={gender.gender_id}>{gender.title}</option>);
                             })}
@@ -82,7 +82,7 @@ const CreateName = (props) => {
                     </div>
 
                     <button className="btn btn-primary">Create</button>
-                    { redirect ? (<Redirect to={{pathname:"/more-detail", state:{name: name}}}/>) : null }
+                    {redirect ? (<Redirect to={{ pathname: "/more-detail", state: { name: name } }} />) : null}
                 </form>
             </div>
         </Fragment>
